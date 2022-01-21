@@ -11,7 +11,7 @@
             </slot>
           </div>
 
-          <form @submit.prevent="submit">
+          <form>
             <div class="modal-body">
               <slot name="body">
                 <fieldset>
