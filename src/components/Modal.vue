@@ -38,7 +38,7 @@
 <!--               <slot name="footer">
                 default footer
                 <button class="modal-default-button" @click="$emit('close')">
-                  OK
+                  OKk
                 </button>
               </slot> -->
               <button class="btn" @click="$emit('close')">Generar reporte</button>
