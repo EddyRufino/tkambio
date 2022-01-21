@@ -41,7 +41,7 @@
                   OK
                 </button>
               </slot> -->
-              <button class="btn" @click="showModal = false">Generar reporte</button>
+              <button class="btn" @click="$emit('close')">Generar reporte</button>
             </div>
           </form>
         </div>
@@ -102,12 +102,12 @@ export default {
 .fieldsett {
     border: 1px solid #B1B1B1;
     border-radius: 6px;
-    width: 40%;
+    width: 50%;
 }
 .fieldsettt {
     border: 1px solid #B1B1B1;
     border-radius: 6px;
-    width: 40%;
+    width: 50%;
 }
 .dates {
     display: flex;
@@ -166,7 +166,7 @@ fieldset {
 }
 
 .modal-container {
-  width: 45%;
+  width: 35%;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
@@ -203,5 +203,37 @@ fieldset {
 .modal-leave-active .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+
+  .dates {
+      display: block;
+  }
+  .fieldsett {
+      border: 1px solid #B1B1B1;
+      border-radius: 6px;
+      width: 90%;
+  }
+  .fieldsettt {
+      border: 1px solid #B1B1B1;
+      border-radius: 6px;
+      width: 90%;
+      margin-top: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+.modal-container {
+  width: 80%;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 6px;
+}
 }
 </style>
